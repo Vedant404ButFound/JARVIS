@@ -106,6 +106,14 @@ if __name__ == "__main__":
             speak('Sir I Cleared Screen')
         elif 'dice' in query:
             printNspeak(f'Sir Here Is Number {random.randint(1,6)}')
+        elif 'open service' in query or 'open services' in query:
+            printNspeak('Opening Services.msc ...')
+            servicePath = r'C:\Windows\System32\services.msc'
+            os.startfile(servicePath)
+        elif 'command' in query:
+            printNspeak('Sir,What Is Your Command ...')
+            cmd = input(f'{os.getcwd()}>')
+            os.system(cmd)
         elif query in quitL: 
             quit()
         elif 'none' == query:
