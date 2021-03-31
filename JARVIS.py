@@ -48,7 +48,7 @@ if __name__ == "__main__":
         query = voice2string().lower()
         if 'search' in query:
             printNspeak('Searching In Google...')
-            query = query.replace('search','')
+            query = query.replace('search ','')
             web.open(f'https://google.com/search?q={query}')
         elif 'wikipedia' in query:
             query = query.replace('wikipedia','')
